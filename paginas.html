@@ -12,8 +12,8 @@
         <h1 id="nome"></h1>
 
         <input type="button" class="botao_salas" id="sgilbertogil" value="Salão Gilberto Gil">
-        <input type="button" class="botao_salas" id="makerlab" value="Maker Lab" onclick="" >
-        <input type="button" class="botao_salas" id="sheleyabreu" value="Sala Heley Abreu" onclick="">
+        <input type="button" class="botao_salas" id="makerlab" value="Maker Lab">
+        <input type="button" class="botao_salas" id="sheleyabreu" value="Sala Heley Abreu">
         <input type="button" class="botao_salas" id="spaulofreire" value="Sala Paulo Freire" onclick="" >
 
     </div>
@@ -21,9 +21,18 @@
     <div id="modalgil" class="modal-container">
         <div class="modal">
         <button class="button-fechar">X</button>   
-        <h3 id="nomesala">Tetsando po</h3>
+        <h3>Salão Gilberto Gil</h3>
+        <p class="texto">Se encontra no 2° andar da CAV. </p>
+        <p class="texto">"O salão foi pensado no nome do cantor e compositor Gilberto Gil como forma de homenagem e referências as atividades que acontecem no local."</p>
 
         </div>
+
+        <div id="modalmaker" class="modal-container">
+            <div class="modal">
+            <button class="button-fechar">X</button>   
+            <h3>makers</h3>
+    
+            </div>
 
     </div>
 
@@ -32,7 +41,7 @@
 <script src="nomedouser.js"></script>
 <script>
 
-    function iniciaModal(modalID){
+    function iniciaModalGil(modalID){
         const modal = document.getElementById(modalID);
         if(modal){
             modal.classList.add('mostrar');
@@ -45,8 +54,8 @@
     }
 
     const abrir = document.querySelector('.botao_salas')
-    abrir.addEventListener('click', () => iniciaModal('modalgil'));
-    
+    abrir.addEventListener('click', () => iniciaModalGil('modalgil'));
+
 
 
 </script>
