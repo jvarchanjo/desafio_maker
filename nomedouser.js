@@ -1,3 +1,3 @@
-const name = sessionStorage.getItem('name');
-const frase = `Seja bem vindo, ${name}!`
-document.getElementById('name').innerHTML = frase;
+const name = sessionStorage.getItem('nomeuser');
+const frase = `Seja bem vindo, ${name}! <br> Escolha qual sala deseja saber mais informações.`
+document.getElementById('nome').innerHTML = frase;

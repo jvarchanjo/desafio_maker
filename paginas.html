@@ -10,8 +10,45 @@
 
     <div class="content">
         <h1 id="nome"></h1>
+
+        <input type="button" class="botao_salas" id="sgilbertogil" value="Salão Gilberto Gil">
+        <input type="button" class="botao_salas" id="makerlab" value="Maker Lab" onclick="" >
+        <input type="button" class="botao_salas" id="sheleyabreu" value="Sala Heley Abreu" onclick="">
+        <input type="button" class="botao_salas" id="spaulofreire" value="Sala Paulo Freire" onclick="" >
+
     </div>
 
+    <div id="modalgil" class="modal-container">
+        <div class="modal">
+        <button class="button-fechar">X</button>   
+        <h3 id="nomesala">Tetsando po</h3>
+
+        </div>
+
+    </div>
+
+     
+
 <script src="nomedouser.js"></script>
+<script>
+
+    function iniciaModal(modalID){
+        const modal = document.getElementById(modalID);
+        if(modal){
+            modal.classList.add('mostrar');
+            modal.addEventListener('click', (e) => {
+                if(e.target.id == modalID ||e.target.className == 'button-fechar' ){
+                    modal.classList.remove('mostrar')
+                }
+            });
+    }
+    }
+
+    const abrir = document.querySelector('.botao_salas')
+    abrir.addEventListener('click', () => iniciaModal('modalgil'));
+    
+
+
+</script>
 </body>
 </html>
